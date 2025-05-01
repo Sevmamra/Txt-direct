@@ -246,7 +246,7 @@ async def restart_handler(_, m):
 async def start_command(bot: Client, message: Message):
     random_image_url = random.choice(image_urls)
     caption = (
-        "𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!\n\n➠ 𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭\n\n➠ Can Extract Videos & PDFs From Your Text File and Upload to Telegram!\n\n➠ For Guide Use Command /help 📖\n\n➠ 𝐌𝐚𝐝𝐞 𝐁𝐲 :  𝓢𝓐𝓤𝓡𝓐𝓥 𝓑𝓞𝓣𝓢 💪 "
+        "𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!\n\n➠ 𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭\n\n➠ Can Extract Videos & PDFs From Your Text File and Upload to Telegram!\n\n➠ For Guide Use Command /help 📖\n\n➠ 𝐌𝐚𝐝𝐞 𝐁𝐲 :  SAURAV BOTS 💪 "
     )
     await bot.send_photo(
         chat_id=message.chat.id,
@@ -283,7 +283,7 @@ async def info(bot: Client, update: Message):
 @bot.on_message(filters.command(["help"]))
 async def txt_handler(client: Client, m: Message):
     await bot.send_message(m.chat.id, text= (
-        f"🎉Congrats! You are using 𝓢𝓐𝓤𝓡𝓐𝓥 𝓑𝓞𝓣𝓢:\n\n"
+        f"🎉Congrats! You are using SAURAV BOTS:\n\n"
         f"✦**Available Commands Here**✦\n\n"
         f"┣⪼01. /start - To Alive Check Bot \n"
         f"┣⪼02. /drm - for extract txt file\n"
@@ -295,7 +295,7 @@ async def txt_handler(client: Client, m: Message):
         f"┣⪼08. /info - Your information.\n"
         f"┣⪼09. /stop - Stop the Running Task. 🚫\n"
         f"╰⪼🔗  Direct Send Link For Extract (with https://)\n\n"
-        f"**If you have any questions, feel free to ask [𝓢𝓐𝓤𝓡𝓐𝓥 𝓑𝓞𝓣𝓢 💪](https://t.me/+fjfF27Tm-pBkOTc1)! 💬**\n"
+        f"**If you have any questions, feel free to ask [SAURAV BOTS 💪](https://t.me/+hR3abi3piUUxYzY1)! 💬**\n"
         )
     ) 
 
@@ -395,7 +395,7 @@ async def txt_handler(bot: Client, m: Message):
     raw_text3 = input3.text
     await input3.delete(True)
     if raw_text3 == '1':
-        CR = '[𝓢𝓐𝓤𝓡𝓐𝓥 𝓑𝓞𝓣𝓢 💪](https://t.me/+hR3abi3piUUxYzY1)'
+        CR = '[SAURAV BOTS 💪](https://t.me/+hR3abi3piUUxYzY1)'
     else:
         CR = raw_text3
 
@@ -601,7 +601,7 @@ async def txt_handler(bot: Client, m: Message):
                                f'╰━━🖇️𝐔𝐫𝐥 » <a href="{url}">__**Api Link**__</a>\n' \
                                f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" \
                                f"🛑**Send** /stop **to stop process**\n┃\n" \
-                               f"╰━✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ [𝓢𝓐𝓤𝓡𝓐𝓥 𝓑𝓞𝓣𝓢 💪](https://t.me/+hR3abi3piUUxYzY1)"
+                               f"╰━✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ [SAURAV BOTS 💪](https://t.me/+hR3abi3piUUxYzY1)"
                     prog = await m.reply_text(Show, disable_web_page_preview=True)
                     res_file = await helper.download_and_decrypt_video(url, cmd, name, appxkey)  
                     filename = res_file  
@@ -630,7 +630,7 @@ async def txt_handler(bot: Client, m: Message):
                                f'╰━━🖇️𝐔𝐫𝐥 » <a href="{url}">__**Api Link**__</a>\n' \
                                f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" \
                                f"🛑**Send** /stop **to stop process**\n┃\n" \
-                               f"╰━✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ [𝓢𝓐𝓤𝓡𝓐𝓥 𝓑𝓞𝓣𝓢 💪](https://t.me/+hR3abi3piUUxYzY1)"
+                               f"╰━✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ [SAURAV BOTS 💪](https://t.me/+hR3abi3piUUxYzY1)"
                     prog = await m.reply_text(Show, disable_web_page_preview=True)
                     res_file = await helper.decrypt_and_merge_video(mpd, keys_string, path, name, raw_text2)
                     filename = res_file
@@ -659,7 +659,7 @@ async def txt_handler(bot: Client, m: Message):
                                f'╰━━🖇️𝐔𝐫𝐥 » <a href="{url}">__**Api Link**__</a>\n' \
                                f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" \
                                f"🛑**Send** /stop **to stop process**\n┃\n" \
-                               f"╰━✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ [𝓢𝓐𝓤𝓡𝓐𝓥 𝓑𝓞𝓣𝓢 💪](https://t.me/+hR3abi3piUUxYzY1)"
+                               f"╰━✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ [SAURAV BOTS 💪](https://t.me/+hR3abi3piUUxYzY1)"
                     prog = await m.reply_text(Show, disable_web_page_preview=True)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -689,7 +689,7 @@ async def txt_handler(bot: Client, m: Message):
                        f"├🔹𝙵𝚊𝚒𝚕𝚎𝚍 𝙻𝚒𝚗𝚔𝚜 : {failed_count}\n"
                        f"├✅𝚂𝚝𝚊𝚝𝚞𝚜 : 𝙲𝚘𝚖𝚙𝚕𝚎𝚝𝚎𝚍\n"
                        f"├─────────────────────\n"
-                       f"├✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ 𝓢𝓐𝓤𝓡𝓐𝓥 𝓑𝓞𝓣𝓢 💪\n"
+                       f"├✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ SAURAV BOTS 💪\n"
                        f"╰─────────────────────╯\n`")
              
 bot.run()

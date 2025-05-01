@@ -1,6 +1,6 @@
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Welcome+To+Txt+Uploader+Bot+!)
 
-Welcome to DRM bot made by @nikhil.saini.khe (Instagram)
+Welcome to DRM bot made by @casauravs (Telegram)
 
 > **command**
 
@@ -12,7 +12,7 @@ Direct Deploy via click these button
 
 ## Deploy to Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://www.github.com/nikhilsainiop/Saini-txt-direct)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=[https://www.github.com/nikhilsainiop/Saini-txt-direct](https://github.com/Sevmamra/Txt-direct))
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
 

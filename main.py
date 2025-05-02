@@ -56,7 +56,7 @@ photologo = 'https://i.ibb.co/qLdbQZg1/x.jpg' #https://envs.sh/GV0.jpg
 photoyt = 'https://tinypic.host/images/2025/03/18/YouTube-Logo.wine.png' #https://envs.sh/GVi.jpg
 photocp = 'https://tinypic.host/images/2025/03/28/IMG_20250328_133126.jpg'
 photozip = 'https://envs.sh/cD_.jpg'
-PREMIUM_USERS = set(6286749445)  # Premium users की IDs store करेगा
+PREMIUM_USERS = set()  # Premium users की IDs store करेगा
 ADMIN_ID = 6567162029  # अपनी Telegram ID डालें (जैसे 5937200123)
 
 async def show_random_emojis(message):

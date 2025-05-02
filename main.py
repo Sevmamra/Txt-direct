@@ -316,12 +316,13 @@ async def txt_handler(bot: Client, m: Message):
     # Agar user premium nahi hai toh rok do
     if m.from_user.id not in PREMIUM_USERS:
         await m.reply_text(
-            "❌ **Ye Command Sirf Premium Users ke Liye Hai!**\n\n"
-            f"📲 Premium lene ke liye contact karo: {PREMIUM_CONTACT}\n\n"
+            "❌ **Premium Feature Locked!**\n\n"
+            "This command is exclusively for premium users.\n\n" 
+            f"💎 Get Premium Access by contacting: {PREMIUM_CONTACT}\n\n"
             "✨ **Premium Benefits:**\n"
-            "- Sabhi links download karne ki full access\n"
-            "- Fast processing\n"
-            "- No ads/restrictions",
+            "- High-speed downloads\n"
+            "- Priority processing\n"
+            "- Exclusive features"
             reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton("🔐 Get Premium", url=f"https://t.me/{PREMIUM_CONTACT[1:]}")]
             ])
@@ -329,7 +330,7 @@ async def txt_handler(bot: Client, m: Message):
         return
 
     # Agar premium user hai toh aage chalne do (original code)
-    editable = await m.reply_text(f"`🔹Hi I am Powerful TXT Downloader📥 Bot...`")
+    editable = await m.reply_text(f"`🔹Hi I am Powerful TXT Uploader Bot 📥.\n🔹Send me the txt file and wait.`")
     input: Message = await bot.listen(editable.chat.id)
     y = await input.download()
     # ... (yahan se original /drm code continue karega) ...

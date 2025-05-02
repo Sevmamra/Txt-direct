@@ -38,7 +38,9 @@ import aiofiles
 import zipfile
 import shutil
 import ffmpeg
-
+# Premium Users List (Apni ID yahan dalo)
+PREMIUM_USERS = [6567162029, 6286749445]  # ← Apna ID yahan likho
+PREMIUM_CONTACT = "@Casauravs"  # ← Apna contact yahan likho
 # Initialize the bot
 bot = Client(
     "bot",
@@ -309,7 +311,28 @@ async def send_logs(client: Client, m: Message):  # Correct parameter name
     except Exception as e:
         await m.reply_text(f"Error sending logs: {e}")
 
-@bot.on_message(filters.command(["drm"]) )
+@bot.on_message(filters.command(["drm"]))
+async def txt_handler(bot: Client, m: Message):
+    # Agar user premium nahi hai toh rok do
+    if m.from_user.id not in PREMIUM_USERS:
+        await m.reply_text(
+            "❌ **Ye Command Sirf Premium Users ke Liye Hai!**\n\n"
+            f"📲 Premium lene ke liye contact karo: {PREMIUM_CONTACT}\n\n"
+            "✨ **Premium Benefits:**\n"
+            "- Sabhi links download karne ki full access\n"
+            "- Fast processing\n"
+            "- No ads/restrictions",
+            reply_markup=InlineKeyboardMarkup([
+                [InlineKeyboardButton("🔐 Get Premium", url=f"https://t.me/{PREMIUM_CONTACT[1:]}")]
+            ])
+        )
+        return
+
+    # Agar premium user hai toh aage chalne do (original code)
+    editable = await m.reply_text(f"`🔹Hi I am Powerful TXT Downloader📥 Bot...`")
+    input: Message = await bot.listen(editable.chat.id)
+    y = await input.download()
+    # ... (yahan se original /drm code continue karega) ...
 async def txt_handler(bot: Client, m: Message):
     editable = await m.reply_text(f"`🔹Hi I am Poweful TXT Downloader📥 Bot.\n🔹Send me the txt file and wait.`")
     input: Message = await bot.listen(editable.chat.id)

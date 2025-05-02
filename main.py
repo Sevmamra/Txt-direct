@@ -322,7 +322,7 @@ async def txt_handler(bot: Client, m: Message):
             "✨ **Premium Benefits:**\n"
             "- High-speed downloads\n"
             "- Priority processing\n"
-            "- Exclusive features"
+            "- Exclusive features",
             reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton("🔐 Get Premium", url=f"https://t.me/{PREMIUM_CONTACT[1:]}")]
             ])

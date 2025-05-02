@@ -56,16 +56,12 @@ photologo = 'https://i.ibb.co/qLdbQZg1/x.jpg' #https://envs.sh/GV0.jpg
 photoyt = 'https://tinypic.host/images/2025/03/18/YouTube-Logo.wine.png' #https://envs.sh/GVi.jpg
 photocp = 'https://tinypic.host/images/2025/03/28/IMG_20250328_133126.jpg'
 photozip = 'https://envs.sh/cD_.jpg'
-PREMIUM_USERS = set()  # Premium users की IDs store करेगा
-ADMIN_ID = 6567162029  # अपनी Telegram ID डालें (जैसे 5937200123)
 
 async def show_random_emojis(message):
     emojis = ['🐼', '🐶', '🐅', '⚡️', '🚀', '✨', '💥', '☠️', '🥂', '🍾', '📬', '👻', '👀', '🌹', '💀', '🐇', '⏳', '🔮', '🦔', '📖', '🦁', '🐱', '🐻‍❄️', '☁️', '🚹', '🚺', '🐠', '🦋']
     emoji_message = await message.reply_text(' '.join(random.choices(emojis, k=1)))
     return emoji_message
-def is_premium_user(user_id):
-    return user_id in PREMIUM_USERS or user_id == ADMIN_ID
-    
+
 # Inline keyboard for start command
 BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url="https://t.me/Inter_X_Admin_Bot")]])
 keyboard = InlineKeyboardMarkup(
@@ -117,28 +113,7 @@ async def cookies_handler(client: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(f"⚠️ An error occurred: {str(e)}")
-@bot.on_message(filters.command("add") & filters.user(ADMIN_ID))
-async def add_premium_user(client, message: Message):
-    try:
-        user_id = int(message.command[1])
-        PREMIUM_USERS.add(user_id)
-        await message.reply_text(f"✅ User {user_id} added to premium list!")
-    except (IndexError, ValueError):
-        await message.reply_text("Usage: /add <user_id>")
-    except Exception as e:
-        await message.reply_text(f"Error: {str(e)}")
 
-@bot.on_message(filters.command("remove") & filters.user(ADMIN_ID))
-async def remove_premium_user(client, message: Message):
-    try:
-        user_id = int(message.command[1])
-        PREMIUM_USERS.discard(user_id)
-        await message.reply_text(f"✅ User {user_id} removed from premium list!")
-    except (IndexError, ValueError):
-        await message.reply_text("Usage: /remove <user_id>")
-    except Exception as e:
-        await message.reply_text(f"Error: {str(e)}")
-        
 @bot.on_message(filters.command(["t2t"]))
 async def text_to_txt(client, message: Message):
     user_id = str(message.from_user.id)
@@ -336,16 +311,6 @@ async def send_logs(client: Client, m: Message):  # Correct parameter name
 
 @bot.on_message(filters.command(["drm"]) )
 async def txt_handler(bot: Client, m: Message):
-    if not is_premium_user(m.from_user.id):
-        await m.reply_text(
-            "🚫 Premium Feature!\n\n"
-            "This command is only available for premium users.\n"
-            "Contact @Casauravs to get premium access.",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("Contact Admin", url="https://t.me/Casauravs")]
-            ])
-        )
-        return
     editable = await m.reply_text(f"`🔹Hi I am Poweful TXT Downloader📥 Bot.\n🔹Send me the txt file and wait.`")
     input: Message = await bot.listen(editable.chat.id)
     y = await input.download()

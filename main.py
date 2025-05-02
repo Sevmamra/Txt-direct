@@ -283,7 +283,7 @@ async def info(bot: Client, update: Message):
 @bot.on_message(filters.command(["help"]))
 async def txt_handler(client: Client, m: Message):
     await bot.send_message(m.chat.id, text= (
-        f"🎉Congrats{update.from_user.first_name}! You are using SAURAV BOTS:\n\n"
+        f"🎉Congrats{m.from_user.first_name}! You are using SAURAV BOTS:\n\n"
         f"✦**Available Commands Here**✦\n\n"
         f"┣⪼01. /start - To Alive Check Bot \n"
         f"┣⪼02. /drm - for extract txt file\n"
